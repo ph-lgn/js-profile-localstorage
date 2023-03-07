@@ -1,0 +1,144 @@
+body {
+    background: url(../img/hand-painted-watercolor-pastel-sky-background_23-2148902771.avif)center/cover;
+    height: 100vh;
+    font-family: 'Titillium Web', sans-serif;
+    color: #555555b6;
+}
+
+// ------------ 1ère window
+.wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+
+.active-wrapper {
+    position: fixed;
+    top:50%;
+    left:50%;
+    margin: 0 auto;
+    transform:translate(-400%, -50%);
+    transition:.3s all ease-in-out;
+    opacity: 0;
+}
+
+
+.infosUser {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+label {
+    font-size: 25px;
+}
+input {
+    align-self: flex-start;
+    width: 350px;
+    background: transparent;
+    border: 2px solid #555555b6;
+    border-radius: 8px;
+    padding: 15px; 
+    margin-bottom: 45px;
+   
+
+} 
+input:focus {
+        outline: 2px solid aqua;
+    }
+
+button {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: #0a0909b6;
+    font-weight: 600;
+    width: 150px;
+    align-self: flex-start;
+    border: 1px solid #555555b6;
+    border-radius: 8px;
+    padding: 8px;
+    background: transparent;
+    &:hover {
+        cursor: pointer;
+        background: rgba(226, 46, 217, 0.349);
+        color: rgb(0, 0, 0);
+    }
+}
+
+// -------------------- 2ème window
+.profile {
+    max-width: 400px;
+    width: 90%;
+    margin:0 auto;
+    background:rgba(0,0,0, .5);
+    color:#fff;
+    padding:0 50px 50px;
+    border-radius:15px;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-400%, -50%);
+    transition:.3s all ease-in-out;
+    
+    &.picture {
+        width: 150px;
+        height: 150px;
+        background-position : center;
+        background-size:cover;
+        
+        border:5px solid rgba(0,0,0, .5);
+        transform:translateY(-50%);
+        
+    }
+    .picture img {
+        width: 100%;
+        border-radius:50%;
+    }
+    i {
+        position: absolute;
+        right:10px;
+        top:10px;
+    }
+
+}
+// -----------------------active
+.active {
+    transform:translate(-50%,-50%);
+    transition: .3s all ease-in-out;
+}
+
+
+i:hover {
+    cursor: pointer;
+            
+}
+main {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+}
+.picture {
+    width: 150px;
+    height: 150px;
+    background-position : center;
+    background-size:cover;
+    border-radius:50%;
+    border:5px solid rgba(0,0,0, .5);
+    transform:translateY(-50%);
+}
+
+.textUser {
+    color: white;
+    z-index: 100;
+    font-size: 25px;
+}
+
+p {
+    text-align: center;
+    line-height: 45px;
+}
